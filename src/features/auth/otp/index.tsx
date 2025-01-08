@@ -12,18 +12,18 @@ export default function Otp() {
             Two-factor Authentication
           </h1>
           <p className='text-sm text-muted-foreground'>
-            Please enter the authentication code. <br /> We have sent the
-            authentication code to your email.
+            Masukan kode otentikasi. <br /> Kami sudah mengirim kode otentikasi
+            ke email kamu.
           </p>
         </div>
         <OtpForm />
         <p className='mt-4 px-8 text-center text-sm text-muted-foreground'>
-          Haven't received it?{' '}
+          Tidak menerima kode?{' '}
           <Link
             to='/sign-in'
             className='underline underline-offset-4 hover:text-primary'
           >
-            Resend a new code.
+            Kirim ulang.
           </Link>
           .
         </p>

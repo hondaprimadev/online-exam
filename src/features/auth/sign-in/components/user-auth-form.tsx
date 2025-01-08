@@ -3,7 +3,12 @@ import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Link } from '@tanstack/react-router'
-import { IconBrandFacebook, IconBrandGithub } from '@tabler/icons-react'
+import {
+  // IconBrandFacebook,
+  // IconBrandGithub,
+  // IconBrandGmail,
+  IconBrandGoogle,
+} from '@tabler/icons-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
@@ -84,7 +89,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                       to='/forgot-password'
                       className='text-sm font-medium text-muted-foreground hover:opacity-75'
                     >
-                      Forgot password?
+                      Lupa password?
                     </Link>
                   </div>
                   <FormControl>
@@ -104,7 +109,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               </div>
               <div className='relative flex justify-center text-xs uppercase'>
                 <span className='bg-background px-2 text-muted-foreground'>
-                  Or continue with
+                  Atau lanjutkan dengan
                 </span>
               </div>
             </div>
@@ -114,18 +119,19 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                 variant='outline'
                 className='w-full'
                 type='button'
-                disabled={isLoading}
+                // disabled={isLoading}
+                disabled
               >
-                <IconBrandGithub className='h-4 w-4' /> GitHub
+                <IconBrandGoogle className='h-4 w-4' /> Google
               </Button>
-              <Button
+              {/* <Button
                 variant='outline'
                 className='w-full'
                 type='button'
                 disabled={isLoading}
               >
                 <IconBrandFacebook className='h-4 w-4' /> Facebook
-              </Button>
+              </Button> */}
             </div>
           </div>
         </form>

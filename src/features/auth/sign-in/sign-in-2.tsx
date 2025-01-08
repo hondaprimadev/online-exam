@@ -1,7 +1,10 @@
-import ViteLogo from '@/assets/vite.svg'
+import { useNavigate } from '@tanstack/react-router'
+// import ViteLogo from '@/assets/vite.svg'
 import { UserAuthForm } from './components/user-auth-form'
 
 export default function SignIn2() {
+  const navigate = useNavigate()
+
   return (
     <div className='container relative grid h-svh flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0'>
       <div className='relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex'>
@@ -19,11 +22,13 @@ export default function SignIn2() {
           >
             <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
           </svg>
-          Shadcn Admin
+          OSIST (Operator Sistem Sekolah Terpadu)
         </div>
 
         <img
-          src={ViteLogo}
+          src={
+            'https://raw.githubusercontent.com/fahrizalm14/osist-monorepo/main/.github/asset/banner.png'
+          }
           className='relative m-auto'
           width={301}
           height={60}
@@ -33,11 +38,9 @@ export default function SignIn2() {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo;This template has saved me countless hours of work and
-              helped me deliver stunning designs to my clients faster than ever
-              before.&rdquo;
+              &ldquo;Platform Pendidikan Termudah dan Aman.&rdquo;
             </p>
-            <footer className='text-sm'>John Doe</footer>
+            <footer className='text-sm'>member of ERZETID</footer>
           </blockquote>
         </div>
       </div>
@@ -46,27 +49,21 @@ export default function SignIn2() {
           <div className='flex flex-col space-y-2 text-left'>
             <h1 className='text-2xl font-semibold tracking-tight'>Login</h1>
             <p className='text-sm text-muted-foreground'>
-              Enter your email and password below <br />
-              to log into your account
+              Masukan username dan password <br />
+              untuk masuk ke akun kamu.
             </p>
           </div>
           <UserAuthForm />
-          <p className='px-8 text-center text-sm text-muted-foreground'>
-            By clicking login, you agree to our{' '}
-            <a
-              href='/terms'
-              className='underline underline-offset-4 hover:text-primary'
+          <p className='mt-4 px-8 text-center text-sm text-muted-foreground'>
+            Belum punya akun?{' '}
+            <span
+              onClick={() => {
+                navigate({ to: '/sign-up' })
+              }}
+              className='cursor-pointer underline underline-offset-4 hover:text-primary'
             >
-              Terms of Service
-            </a>{' '}
-            and{' '}
-            <a
-              href='/privacy'
-              className='underline underline-offset-4 hover:text-primary'
-            >
-              Privacy Policy
-            </a>
-            .
+              Daftar disini.
+            </span>
           </p>
         </div>
       </div>

@@ -97,10 +97,10 @@ if (!rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider defaultTheme='light' storageKey='vite-ui-theme'>
+        <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
           <RouterProvider
             router={router}
-            context={{ auth: { isLogin: false } }}
+            context={{ auth: { isLogin: true } }}
           />
         </ThemeProvider>
       </QueryClientProvider>
